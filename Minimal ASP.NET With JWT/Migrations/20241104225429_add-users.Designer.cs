@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Minimal_ASP.NET_With_JWT.DbContexts;
 
@@ -10,9 +11,11 @@ using Minimal_ASP.NET_With_JWT.DbContexts;
 namespace Minimal_ASP.NET_With_JWT.Migrations
 {
     [DbContext(typeof(DbContextData))]
-    partial class DbContextDataModelSnapshot : ModelSnapshot
+    [Migration("20241104225429_add-users")]
+    partial class addusers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

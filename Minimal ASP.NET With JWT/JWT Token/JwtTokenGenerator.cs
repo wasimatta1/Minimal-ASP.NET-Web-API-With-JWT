@@ -1,5 +1,6 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using Minimal_ASP.NET_With_JWT.DbContexts;
+using Minimal_ASP.NET_With_JWT.DTO;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -17,7 +18,7 @@ namespace Minimal_ASP.NET_With_JWT.JWT_Token
             _context = context;
         }
 
-        public JWTTokens GenerateToken(User user)
+        public JWTTokens GenerateToken(UserTokenDto user)
         {
             if (!_context.Users.Any(u => u.UserName == user.UserName && u.Password == user.Password))
             {

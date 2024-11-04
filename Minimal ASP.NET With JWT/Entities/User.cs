@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Minimal_ASP.NET_With_JWT
+namespace Minimal_ASP.NET_With_JWT.Entities
 {
     public class User
     {

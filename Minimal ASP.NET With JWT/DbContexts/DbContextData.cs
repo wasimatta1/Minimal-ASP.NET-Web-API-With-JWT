@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Minimal_ASP.NET_With_JWT.Entities;
 
 namespace Minimal_ASP.NET_With_JWT.DbContexts
 {
@@ -18,7 +19,16 @@ namespace Minimal_ASP.NET_With_JWT.DbContexts
 
             optionsBuilder.UseSqlServer(connectionString);
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
+            // Seed data
+            modelBuilder.Entity<User>().HasData(
+                new User { Id = 1, FirstName = "Wasim", LastName = "Atta", UserName = "wasimatta", Password = "123" },
+                new User { Id = 2, FirstName = "Ahmad", LastName = "Ali", UserName = "ahmadali", Password = "123" }
+            );
+        }
 
     }
 }
