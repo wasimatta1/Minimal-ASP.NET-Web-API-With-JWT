@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minimal ASP.NET With JWT", "Minimal ASP.NET With JWT\Minimal ASP.NET With JWT.csproj", "{94978100-262B-4B54-9FB0-3BD68DD91CAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94978100-262B-4B54-9FB0-3BD68DD91CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94978100-262B-4B54-9FB0-3BD68DD91CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94978100-262B-4B54-9FB0-3BD68DD91CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94978100-262B-4B54-9FB0-3BD68DD91CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8591D8AA-7B65-4877-BAF2-44C4F70EF0D1}
+	EndGlobalSection
+EndGlobal
