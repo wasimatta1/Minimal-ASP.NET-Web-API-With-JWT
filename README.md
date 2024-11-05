@@ -51,10 +51,3 @@ JWT authentication provides a secure, token-based authentication model suitable 
 This minimal ASP.NET Web API demonstrates the implementation of JWT authentication to secure API endpoints. 
 By using JWT, the API ensures secure, authenticated access to its resources, making it a strong foundation for more complex applications requiring user-based access control.
 """
-
-# Writing the README content to a file for download
-file_path = "/mnt/data/README.md"
-with open(file_path, "w") as readme_file:
-    readme_file.write(readme_content)
-
-file_path
