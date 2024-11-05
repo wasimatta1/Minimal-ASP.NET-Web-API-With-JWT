@@ -45,9 +45,30 @@ namespace Minimal_ASP.NET_With_JWT.JWT_Token
             };
         }
 
-        public string ValidateToken(string token)
+        public bool ValidateToken(string token)
         {
-            throw new NotImplementedException();
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.UTF8.GetBytes(_configuration["JWTToken:Key"]);
+
+            try
+            {
+                tokenHandler.ValidateToken(token, new TokenValidationParameters
+                {
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = false,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                }, out SecurityToken validatedToken);
+
+                return true;
+
+            }
+            catch
+            {
+
+                return false;
+            }
         }
 
     }

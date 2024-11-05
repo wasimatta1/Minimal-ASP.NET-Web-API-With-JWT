@@ -21,9 +21,19 @@ namespace Minimal_ASP.NET_With_JWT
             var tokens = _jwtTokenService.GenerateToken(user);
             if (tokens == null)
             {
-                return Unauthorized();
+                return Unauthorized("User Not Sign UP");
             }
             return Ok(tokens);
+        }
+
+        [HttpPost("validate")]
+        public IActionResult ValidateToken([FromBody] string token)
+        {
+            if (!_jwtTokenService.ValidateToken(token))
+            {
+                return Unauthorized("UnValidateToken");
+            }
+            return Ok("ValidateToken");
         }
     }
 }

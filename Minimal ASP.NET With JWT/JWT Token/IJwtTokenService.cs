@@ -6,6 +6,6 @@ namespace Minimal_ASP.NET_With_JWT.JWT_Token
     {
         public JWTTokens GenerateToken(UserTokenDto user);
 
-        public string ValidateToken(string token);
+        public bool ValidateToken(string token);
     }
 }
